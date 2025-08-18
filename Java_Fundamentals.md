@@ -189,8 +189,8 @@ Image of a simple flowchart
 graph TD  
     A[Start] --> B(Input a number);
     B --> C{Is number % 2 == 0?};
-    C -- Yes --> D[Print "Even"];
-    C -- No --> E[Print "Odd"];
+    C -- Yes --> D[Print Even];
+    C -- No --> E[Print Odd];
     D --> F[End];
     E --> F;
 ```
