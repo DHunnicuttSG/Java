@@ -1,3 +1,4 @@
 # Java
 
-* Files for Java curriculum and intelliJ
+* Files for Java content summaries
+
