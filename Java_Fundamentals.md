@@ -185,7 +185,7 @@ A flowchart is a diagram that visually represents the steps and decisions in a p
 
 Image of a simple flowchart
 
-```Mermaid.js
+```mermaid
 graph TD  
     A[Start] --> B(Input a number);
     B --> C{Is number % 2 == 0?};
