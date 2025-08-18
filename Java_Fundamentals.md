@@ -183,7 +183,7 @@ An Integrated Development Environment (IDE) provides tools to help you find and 
 
 A flowchart is a diagram that visually represents the steps and decisions in a program. It uses different shapes to represent different actions.
 
-Image of a simple flowchart
+**Image of a simple flowchart**
 
 ```mermaid
 graph TD  
