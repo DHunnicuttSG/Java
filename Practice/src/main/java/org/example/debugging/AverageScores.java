@@ -10,17 +10,17 @@ public class AverageScores {
         int count = scores.length;
 
         System.out.println("Calculating average score...");
-        for (int i = 0; i <= count; i++) {
+        for (int i = 0; i < count; i++) {
             total += scores[i];
         }
 
-        double average = total / count;
+        double average = (double)total / (double)count;
         System.out.println("Average score: " + average);
 
 
         int highest = scores[0];
         for (int i = 1; i < scores.length; i++) {
-            if (scores[i] < highest) {
+            if (scores[i] > highest) {
                 highest = scores[i];
             }
         }
