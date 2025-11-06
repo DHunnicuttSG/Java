@@ -13,7 +13,7 @@ public class Main {
 //
 //        p2.speak();
 //        p2.walk();
-        
+
         double[] myArray = new double[1];
         for (int i = 0; i < myArray.length; i++) {
             System.out.println(myArray[i]);

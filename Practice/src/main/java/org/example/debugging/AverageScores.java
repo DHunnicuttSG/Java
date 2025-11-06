@@ -10,7 +10,7 @@ public class AverageScores {
         int count = scores.length;
 
         System.out.println("Calculating average score...");
-        for (int i = 0; i < count; i++) {
+        for (int i = 1; i <= count; i++) {
             total += scores[i];
         }
 
