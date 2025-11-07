@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class CodeReview {
     public static void main(String[] args) {
-    
+
     }
 }
 
