@@ -1,7 +1,10 @@
 package org.example;
 
+import org.example.controller.ClassRosterController;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        ClassRosterController controller = new ClassRosterController();
+        controller.run();
     }
 }
