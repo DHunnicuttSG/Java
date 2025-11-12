@@ -21,7 +21,6 @@ public class Person {
     int[] myArray = new int[3];
 
 
-
     Person() {}
 
     public Person(int personId, int age, String firstName, String lastname, boolean isFemale, double height) {
@@ -32,6 +31,7 @@ public class Person {
         this.isFemale = isFemale;
         this.height = height;
     }
+
 
     public int getPersonId() {
         return personId;
