@@ -11,7 +11,6 @@ public class ClassRosterDaoFileImpl implements ClassRosterDao{
 
     private Map<String, Student> students = new HashMap<>();
 
-
     @Override
     public Student addStudent(String studentId, Student student) {
         Student prevStudent = students.put(studentId, student);
@@ -25,16 +24,12 @@ public class ClassRosterDaoFileImpl implements ClassRosterDao{
 
     @Override
     public Student getStudent(String studentId) {
-        return null;
+        return students.get(studentId);
     }
 
     @Override
     public Student removeStudent(String studentId) {
-        return null;
+        Student removedStudent = students.remove(studentId);
+        return removedStudent;
     }
-
-
-
-
-
 }

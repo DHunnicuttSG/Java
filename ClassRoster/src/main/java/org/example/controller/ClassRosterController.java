@@ -29,19 +29,19 @@ public class ClassRosterController {
                     createStudent();
                     break;
                 case 3:
-                    io.print("View Student");
+                    viewStudent();
                     break;
                 case 4:
-                    io.print("Remove Student");
+                    removeStudent();
                     break;
                 case 5:
                     keepGoing = false;
                     break;
                 default:
-                    io.print("Unknown Command");
+                    unknownCommand();
             }
         }
-        io.print("Goodbye");
+        exitMessage();
     }
 
     private void createStudent(){
@@ -55,5 +55,27 @@ public class ClassRosterController {
         view.displayAllBanner();
         List<Student> studentList = dao.getAllStudents();
         view.displayStudentList(studentList);
+    }
+
+    private void viewStudent() {
+        view.displayStudentBanner();
+        String studentId = view.getStudentIdChoice();
+        Student student = dao.getStudent(studentId);
+        view.displayStudent(student);
+    }
+
+    private void removeStudent() {
+        view.displayRemoveStudentBanner();
+        String studentId = view.getStudentIdChoice();
+        Student removedStudent = dao.removeStudent(studentId);
+        view.displayRemoveResult(removedStudent);
+    }
+
+    private void unknownCommand() {
+        view.displayUnknownCommandBanner();
+    }
+
+    private void exitMessage() {
+        view.displayExitBanner();
     }
 }

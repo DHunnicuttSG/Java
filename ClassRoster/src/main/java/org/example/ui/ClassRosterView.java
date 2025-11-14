@@ -19,6 +19,8 @@ public class ClassRosterView {
         return io.readInt("Please select from the above choices", 1, 5);
     }
 
+    // ***** Add New Student *****
+
     public Student getNewStudentInfo() {
         String studentId = io.readString("Enter Student Id:");
         String firstName = io.readString("Enter First Name:");
@@ -39,6 +41,8 @@ public class ClassRosterView {
         io.readString("Student successfully created.  Please hit enter to continue");
     }
 
+    // ***** Display All Students *****
+
     public void displayStudentList(List<Student> studentList){
         for (Student cs : studentList){
             String studentInfo = String.format("#%s : %s %s",
@@ -52,5 +56,48 @@ public class ClassRosterView {
         io.print("=== Display All Students ===");
     }
 
+    // ***** Display Student *****
 
+    public void displayStudentBanner () {
+        io.print("=== Display Student ===");
+    }
+
+    public String getStudentIdChoice() {
+        return io.readString("Please enter the Student ID.");
+    }
+
+    public void displayStudent(Student student) {
+        if (student != null) {
+            io.print(student.getStudentId());
+            io.print(student.getFirstName() + " " + student.getLastName());
+            io.print(student.getCohort());
+            io.print("");
+        } else {
+            io.print("No such student.");
+        }
+        io.readString("Please hit enter to continue.");
+    }
+
+    // ***** Remove Student *****
+
+    public void displayRemoveStudentBanner () {
+        io.print("=== Remove Student ===");
+    }
+
+    public void displayRemoveResult(Student studentRecord) {
+        if(studentRecord != null){
+            io.print("Student successfully removed.");
+        }else{
+            io.print("No such student.");
+        }
+        io.readString("Please hit enter to continue.");
+    }
+
+    public void displayExitBanner() {
+        io.print("Good Bye!!!");
+    }
+
+    public void displayUnknownCommandBanner() {
+        io.print("Unknown Command!!!");
+    }
 }
