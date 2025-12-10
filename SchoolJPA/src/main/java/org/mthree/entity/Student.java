@@ -12,6 +12,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int studentId;
+
     private String firstName;
     private String lastName;
 
