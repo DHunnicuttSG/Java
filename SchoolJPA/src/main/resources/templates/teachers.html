@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers</title>
+</head>
+<body>
+<h1>Teachers</h1>
+<ul>
+    <li th:each="t : ${teachers}">
+        <span th:text="${t.firstName + ' ' + t.lastName}"></span>
+        <ul>
+            <li th:each="c : ${t.courses}">
+                <span th:text="${c.courseName}"></span>
+            </li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
